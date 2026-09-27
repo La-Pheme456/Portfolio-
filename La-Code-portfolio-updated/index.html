@@ -5,12 +5,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>LA-PHÈMÉ — Creative Web Developer</title>
+    <title>LA-Code — Creative Web Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" />
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -18,7 +26,9 @@
   <body class="loading" data-page="home">
     <div class="loader">
       <div class="loader-inner">
-        <div class="loader-brand">LA<span>-PHÈMÉ</span></div>
+        <div class="loader-brand">
+          <img src="img/preloader.png" alt="La-Code logo" />
+        </div>
 
         <div class="loader-line"></div>
       </div>
@@ -32,12 +42,16 @@
 
     <header>
       <nav class="nav">
-        <a href="index.html" class="brand" data-transition>
+        <a
+          href="index.html"
+          class="brand"
+          data-transition
+          aria-label="La-Code home">
           <div class="brand-mark">
-            <span>LP</span>
+            <img src="img/logo.png" alt="La-Code logo" />
           </div>
 
-          <div class="brand-name">LA<span>-PHÈMÉ</span></div>
+          <div class="brand-name">La<span>-Code</span></div>
         </a>
 
         <div class="nav-links">
@@ -45,8 +59,7 @@
             href="index.html"
             class="nav-link"
             data-page="home"
-            data-transition
-          >
+            data-transition>
             Home
           </a>
 
@@ -54,8 +67,7 @@
             href="about.html"
             class="nav-link"
             data-page="about"
-            data-transition
-          >
+            data-transition>
             About
           </a>
 
@@ -63,8 +75,7 @@
             href="services.html"
             class="nav-link"
             data-page="services"
-            data-transition
-          >
+            data-transition>
             Services
           </a>
 
@@ -118,7 +129,7 @@
 
             <p class="hero-copy reveal delay-2">
               I'm Lawal Oluwafemi — professionally known as
-              <strong>LA-PHÈMÉ</strong>. I design and develop responsive,
+              <strong>La-Code</strong>. I design and develop responsive,
               purposeful websites where technology meets visual creativity.
             </p>
 
@@ -127,8 +138,7 @@
                 href="work.html"
                 class="button button-primary"
                 data-transition
-                data-magnetic
-              >
+                data-magnetic>
                 Explore My Work
                 <i class="ri-arrow-right-up-line"></i>
               </a>
@@ -136,8 +146,7 @@
               <a
                 href="contact.html"
                 class="button button-outline"
-                data-transition
-              >
+                data-transition>
                 Start a Conversation
               </a>
             </div>
@@ -151,16 +160,18 @@
 
               <div class="object-content">
                 <div class="object-top">
-                  <span> LA-PHÈMÉ / 001 </span>
+                  <span> LA-CODE / 001 </span>
 
                   <span> Developer </span>
                 </div>
 
-                <div class="object-monogram">L<span>P</span></div>
+                <div class="object-monogram">
+                  <img src="img/logo.png" alt="La-Code logo" />
+                </div>
 
                 <div class="object-bottom">
                   <div>
-                    <div class="object-title">LA-PHÈMÉ</div>
+                    <div class="object-title">LA-CODE</div>
 
                     <div class="object-role">Web Developer / Creative</div>
                   </div>
@@ -196,6 +207,24 @@
         </div>
       </section>
 
+      <section class="page-extra">
+        <div class="container">
+          <div class="page-extra-inner reveal">
+            <div class="section-number">03 / WHAT MATTERS</div>
+            <p>
+              I try to keep my work clear from the first click to the last. Good
+              design should help people find what they need without making them
+              think too hard.
+            </p>
+            <p>
+              Whether I'm building a website, improving an interface or editing
+              video, I enjoy turning rough ideas into something people can see,
+              understand and use.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="contact">
         <div class="container">
           <div class="contact-inner reveal">
@@ -216,8 +245,7 @@
                 href="contact.html"
                 class="button button-primary"
                 data-transition
-                data-magnetic
-              >
+                data-magnetic>
                 Let's Talk
                 <i class="ri-arrow-right-up-line"></i>
               </a>
@@ -232,20 +260,30 @@
         <div class="footer-inner">
           <div class="footer-copy">
             © 2026
-            <strong>LA-PHÈMÉ</strong>. Built with curiosity.
+            <strong>La-Code</strong>. Built with curiosity.
           </div>
 
           <div class="footer-links">
-            <a href="#" class="footer-link">
+            <a
+              href="https://github.com/La-Pheme456"
+              class="footer-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub">
               <i class="ri-github-line"></i>
             </a>
 
-            <a href="#" class="footer-link">
-              <i class="ri-linkedin-line"></i>
+            <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&sender_device=pc" class="footer-link" target="_blank" rel="noopener" aria-label="TikTok">
+              <i class="ri-tiktok-line"></i>
             </a>
 
-            <a href="#" class="footer-link">
-              <i class="ri-instagram-line"></i>
+            <a
+              href="http://www.youtube.com/@La-phem"
+              class="footer-link"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube">
+              <i class="ri-youtube-line"></i>
             </a>
           </div>
         </div>

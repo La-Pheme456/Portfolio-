@@ -236,4 +236,56 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.transform = "";
     });
   });
+
+  const header = document.querySelector("header");
+
+  if (header) {
+    let lastScrollY = window.scrollY;
+    let scrollTicking = false;
+
+    const updateHeader = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 20) {
+        header.classList.remove("header-hidden");
+      } else if (currentScrollY > lastScrollY && currentScrollY > 90) {
+        header.classList.add("header-hidden");
+      } else if (currentScrollY < lastScrollY) {
+        header.classList.remove("header-hidden");
+      }
+
+      lastScrollY = currentScrollY;
+      scrollTicking = false;
+    };
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!scrollTicking) {
+          window.requestAnimationFrame(updateHeader);
+          scrollTicking = true;
+        }
+      },
+      { passive: true },
+    );
+  }
+
+  const enquiryForm = document.querySelector("#enquiry-form");
+
+  if (enquiryForm) {
+    enquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const name = document.querySelector("#enquiry-name").value.trim();
+      const email = document.querySelector("#enquiry-email").value.trim();
+      const message = document.querySelector("#enquiry-message").value.trim();
+
+      const subject = encodeURIComponent(`Website Enquiry from ${name}`);
+      const body = encodeURIComponent(
+        `Hello LA-Code,\n\nName: ${name}\nEmail: ${email}\n\nProject details:\n${message}\n\nSent from the La-Code portfolio.`,
+      );
+
+      window.location.href = `mailto:femilawal433@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
 });

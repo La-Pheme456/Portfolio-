@@ -252,15 +252,11 @@ img {
 
 header {
   position: fixed;
-
   top: 0;
   left: 0;
   right: 0;
-
   height: var(--nav-height);
-
   z-index: 900;
-
   display: flex;
   align-items: center;
 }
@@ -274,7 +270,7 @@ header {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   padding: 0 6px 0 18px;
 
@@ -1669,5 +1665,137 @@ footer {
     flex-direction: column;
 
     gap: 20px;
+  }
+}
+
+/* ================ REQUESTED UPDATES ================ */
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  padding: 4px;
+}
+
+.brand-mark::before {
+  display: none;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.loader-brand {
+  display: flex;
+  align-items: center;
+}
+
+.loader-brand img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+header {
+  transition:
+    transform 0.55s var(--ease),
+    opacity 0.35s ease;
+}
+
+header.header-hidden {
+  transform: translateY(calc(-100% - 14px));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-story {
+  margin-top: 110px;
+}
+
+.about-story-inner {
+  max-width: 850px;
+  padding-block: 55px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.about-story p {
+  max-width: 720px;
+  margin-top: 22px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.page-extra {
+  padding-block: 40px 110px;
+}
+
+.page-extra-inner {
+  max-width: 760px;
+  border-left: 1px solid var(--purple-light);
+  padding-left: 25px;
+}
+
+.page-extra-inner p {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.enquiry-form {
+  margin-top: 55px;
+  max-width: 760px;
+  display: grid;
+  gap: 14px;
+}
+
+.enquiry-field {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--white);
+  font: inherit;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s var(--ease);
+}
+
+.enquiry-field:focus {
+  border-color: rgba(167, 139, 250, 0.45);
+  transform: translateY(-2px);
+}
+
+.enquiry-field::placeholder {
+  color: var(--muted);
+}
+
+.enquiry-message {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.enquiry-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .about-story {
+    margin-top: 75px;
+  }
+
+  .about-story-inner {
+    padding-block: 40px;
+  }
+
+  .page-extra {
+    padding-bottom: 80px;
   }
 }
