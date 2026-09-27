@@ -1,96 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ember's Delight - Menu & Services</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
 
-    <header id="siteHeader" class="header-container fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid align-items-center">
-                <a class="navbar-brand logo-brand" href="index.html">
-                    <img src="img/logo.png" alt="Ember's Delight Logo" class="brand-logo-img">
-                    <span class="brand-text">Ember's Delight</span>
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-menu ms-auto me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="services.html">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="work.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <a href="contact.html" class="book-table-btn">Book a table</a>
-                </div>
-            </div>
-        </nav>
+    <title>Services — LA-PHÈMÉ</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body data-page="services">
+    <div class="ambient-light"></div>
+
+    <div class="background-grid"></div>
+
+    <div class="page-transition"></div>
+
+    <header>
+      <nav class="nav">
+        <a href="index.html" class="brand" data-transition>
+          <div class="brand-mark">
+            <span>LP</span>
+          </div>
+
+          <div class="brand-name">LA<span>-PHÈMÉ</span></div>
+        </a>
+
+        <div class="nav-links">
+          <a
+            href="index.html"
+            class="nav-link"
+            data-page="home"
+            data-transition
+          >
+            Home
+          </a>
+
+          <a
+            href="about.html"
+            class="nav-link"
+            data-page="about"
+            data-transition
+          >
+            About
+          </a>
+
+          <a
+            href="services.html"
+            class="nav-link"
+            data-page="services"
+            data-transition
+          >
+            Services
+          </a>
+
+          <a href="work.html" class="nav-link" data-page="work" data-transition>
+            Work
+          </a>
+        </div>
+
+        <a href="contact.html" class="nav-cta" data-transition> Let's Talk </a>
+
+        <button class="menu-button">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </nav>
     </header>
 
-    <main class="page-content">
-        <section class="services-hero py-5 text-center">
-            <div class="container">
-                <h1 class="page-title">What We Offer</h1>
-                <p class="lead-text">Take a look at our delicious food services and special offerings.</p>
+    <div class="mobile-menu">
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link" data-transition> Home </a>
+
+        <a href="about.html" class="mobile-link" data-transition> About </a>
+
+        <a href="services.html" class="mobile-link" data-transition>
+          Services
+        </a>
+
+        <a href="work.html" class="mobile-link" data-transition> Work </a>
+
+        <a href="contact.html" class="mobile-link" data-transition> Contact </a>
+      </div>
+    </div>
+
+    <main class="page">
+      <div class="container">
+        <section class="page-intro">
+          <div class="page-intro-inner">
+            <div class="page-label reveal">
+              <span class="kicker-line"></span>
+
+              02 / Services
             </div>
+
+            <h1 class="reveal delay-1">
+              Digital work
+              <span> with purpose. </span>
+            </h1>
+
+            <p class="reveal delay-2">
+              I build practical digital experiences with enough personality to
+              make them stand apart.
+            </p>
+          </div>
         </section>
 
-        <section class="services-list py-5">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="service-card text-center">
-                            <i class="fa-solid fa-utensils service-icon"></i>
-                            <h3>Dine In</h3>
-                            <p>Enjoy a warm and cozy space with your loved ones while enjoying fresh dishes made right to order.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="service-card text-center">
-                            <i class="fa-solid fa-box service-icon"></i>
-                            <h3>Takeaway & Delivery</h3>
-                            <p>Busy day? Get your meals packed neatly and delivered right to your home hot and ready.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="service-card text-center">
-                            <i class="fa-solid fa-champagne-glasses service-icon"></i>
-                            <h3>Event Catering</h3>
-                            <p>Planning a party or family gathering? Let us take care of all the cooking so you can enjoy the day.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="section">
+          <div class="services">
+            <article class="service-card reveal">
+              <span class="service-number"> 01 </span>
+
+              <div class="service-icon">
+                <i class="ri-code-s-slash-line"></i>
+              </div>
+
+              <h3>Frontend Development</h3>
+
+              <p>
+                Clean, responsive interfaces built with a strong foundation in
+                HTML, CSS and JavaScript.
+              </p>
+
+              <div class="service-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <span class="service-number"> 02 </span>
+
+              <div class="service-icon">
+                <i class="ri-layout-4-line"></i>
+              </div>
+
+              <h3>Responsive Websites</h3>
+
+              <p>
+                Websites designed to feel natural across desktop, tablet and
+                mobile.
+              </p>
+
+              <div class="service-tags">
+                <span>Mobile</span>
+                <span>Tablet</span>
+                <span>Desktop</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-number"> 03 </span>
+
+              <div class="service-icon">
+                <i class="ri-pencil-ruler-2-line"></i>
+              </div>
+
+              <h3>UI Implementation</h3>
+
+              <p>
+                Turning designs, concepts and ideas into polished working
+                frontend interfaces.
+              </p>
+
+              <div class="service-tags">
+                <span>UI</span>
+                <span>Interaction</span>
+                <span>Animation</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <span class="service-number"> 04 </span>
+
+              <div class="service-icon">
+                <i class="ri-focus-3-line"></i>
+              </div>
+
+              <h3>Landing Pages</h3>
+
+              <p>
+                Focused pages designed to communicate an idea, product or
+                service clearly.
+              </p>
+
+              <div class="service-tags">
+                <span>Conversion</span>
+                <span>Branding</span>
+                <span>UX</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-number"> 05 </span>
+
+              <div class="service-icon">
+                <i class="ri-refresh-line"></i>
+              </div>
+
+              <h3>Website Maintenance</h3>
+
+              <p>
+                Fixes, updates, improvements and frontend refinements for
+                existing websites.
+              </p>
+
+              <div class="service-tags">
+                <span>Fixes</span>
+                <span>Updates</span>
+                <span>Optimization</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <span class="service-number"> 06 </span>
+
+              <div class="service-icon">
+                <i class="ri-video-line"></i>
+              </div>
+
+              <h3>Video Editing</h3>
+
+              <p>
+                Creative editing for digital content, promotional videos and
+                social media.
+              </p>
+
+              <div class="service-tags">
+                <span>Editing</span>
+                <span>Content</span>
+                <span>Visuals</span>
+              </div>
+            </article>
+          </div>
         </section>
 
-        <section class="extra-menu py-5 text-center">
-            <div class="container">
-                <h2>Special Projects & Creations</h2>
-                <p>Check out our live web projects:</p>
-                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                    <a href="https://vercel.com/la-code1/fancy-lips/B8tvdBMKdPv3JyLua74ir9EToDQX" target="_blank" class="external-link-btn"><i class="fa-solid fa-link me-2"></i>Fancy Lips Demo</a>
-                    <a href="https://vercel.com/la-code1/ember-s-delight/4CR5raFjkxRuRCB4GzsMeKB5mPGB" target="_blank" class="external-link-btn"><i class="fa-solid fa-link me-2"></i>Ember's Delights Live</a>
-                </div>
+        <section class="contact">
+          <div class="contact-inner reveal">
+            <div class="section-number">HAVE A PROJECT?</div>
+
+            <h2 class="contact-title">
+              Let's make it
+              <span>real.</span>
+            </h2>
+
+            <p class="contact-description">
+              Tell me what you're thinking, what you're trying to solve, or
+              simply where you'd like to go.
+            </p>
+
+            <div class="contact-actions">
+              <a
+                href="contact.html"
+                class="button button-primary"
+                data-transition
+              >
+                Contact LA-PHÈMÉ
+                <i class="ri-arrow-right-up-line"></i>
+              </a>
             </div>
+          </div>
         </section>
+      </div>
     </main>
 
-    <footer class="site-footer py-4">
-        <div class="container text-center">
-            <p>&copy; 2026 Ember's Delight. All rights reserved.</p>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-copy">
+            © 2026
+            <strong>LA-PHÈMÉ</strong>.
+          </div>
+
+          <div class="footer-links">
+            <a href="#" class="footer-link">
+              <i class="ri-github-line"></i>
+            </a>
+
+            <a href="#" class="footer-link">
+              <i class="ri-linkedin-line"></i>
+            </a>
+
+            <a href="#" class="footer-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

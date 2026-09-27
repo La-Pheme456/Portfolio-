@@ -1,149 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ember's Delight - Home</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
 
-    <!-- Header Navigation -->
-    <header id="siteHeader" class="header-container fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid align-items-center">
-                <a class="navbar-brand logo-brand" href="index.html">
-                    <img src="img/logo.png" alt="Ember's Delight Logo" class="brand-logo-img">
-                    <span class="brand-text">Ember's Delight</span>
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-menu ms-auto me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="work.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <a href="contact.html" class="book-table-btn">Book a table</a>
-                </div>
-            </div>
-        </nav>
+    <title>LA-PHÈMÉ — Creative Web Developer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="loading" data-page="home">
+    <div class="loader">
+      <div class="loader-inner">
+        <div class="loader-brand">LA<span>-PHÈMÉ</span></div>
+
+        <div class="loader-line"></div>
+      </div>
+    </div>
+
+    <div class="ambient-light"></div>
+
+    <div class="background-grid"></div>
+
+    <div class="page-transition"></div>
+
+    <header>
+      <nav class="nav">
+        <a href="index.html" class="brand" data-transition>
+          <div class="brand-mark">
+            <span>LP</span>
+          </div>
+
+          <div class="brand-name">LA<span>-PHÈMÉ</span></div>
+        </a>
+
+        <div class="nav-links">
+          <a
+            href="index.html"
+            class="nav-link"
+            data-page="home"
+            data-transition
+          >
+            Home
+          </a>
+
+          <a
+            href="about.html"
+            class="nav-link"
+            data-page="about"
+            data-transition
+          >
+            About
+          </a>
+
+          <a
+            href="services.html"
+            class="nav-link"
+            data-page="services"
+            data-transition
+          >
+            Services
+          </a>
+
+          <a href="work.html" class="nav-link" data-page="work" data-transition>
+            Work
+          </a>
+        </div>
+
+        <a href="contact.html" class="nav-cta" data-transition data-magnetic>
+          Let's Talk
+        </a>
+
+        <button class="menu-button" aria-label="Open menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </nav>
     </header>
 
-    <main class="page-content">
-        <!-- Hero Section -->
-        <section class="hero-section text-center">
-            <div class="container">
-                <h1 class="hero-title">Welcome to Ember's Delight</h1>
-                <p class="hero-subtitle">We serve food made with love, care, and fresh ingredients that make every bite feel like home.</p>
-                <a href="services.html" class="cta-button">Explore Our Menu</a>
+    <div class="mobile-menu">
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link" data-transition> Home </a>
+
+        <a href="about.html" class="mobile-link" data-transition> About </a>
+
+        <a href="services.html" class="mobile-link" data-transition>
+          Services
+        </a>
+
+        <a href="work.html" class="mobile-link" data-transition> Work </a>
+
+        <a href="contact.html" class="mobile-link" data-transition> Contact </a>
+      </div>
+    </div>
+
+    <main class="page">
+      <div class="container">
+        <section class="hero">
+          <div>
+            <div class="hero-kicker reveal">
+              <span class="kicker-line"></span>
+              Creative Web Developer
             </div>
-        </section>
 
-        <!-- Feature Grid Section -->
-        <section class="features-section py-5">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
+            <h1 class="reveal delay-1">
+              I build
 
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature-card text-center">
-                            <i class="fa-solid fa-leaf feature-icon"></i>
-                            <h3>Fresh Ingredients</h3>
-                            <p>Farm-Fresh Sourced Locally</p>
-                        </div>
-                    </div>
+              <span class="light"> digital </span>
+
+              <span class="accent"> experiences. </span>
+            </h1>
+
+            <p class="hero-copy reveal delay-2">
+              I'm Lawal Oluwafemi — professionally known as
+              <strong>LA-PHÈMÉ</strong>. I design and develop responsive,
+              purposeful websites where technology meets visual creativity.
+            </p>
+
+            <div class="hero-actions reveal delay-3">
+              <a
+                href="work.html"
+                class="button button-primary"
+                data-transition
+                data-magnetic
+              >
+                Explore My Work
+                <i class="ri-arrow-right-up-line"></i>
+              </a>
+
+              <a
+                href="contact.html"
+                class="button button-outline"
+                data-transition
+              >
+                Start a Conversation
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-object reveal delay-2">
+            <div class="object-shadow"></div>
+
+            <div class="object" data-tilt>
+              <div class="object-grid"></div>
+
+              <div class="object-content">
+                <div class="object-top">
+                  <span> LA-PHÈMÉ / 001 </span>
+
+                  <span> Developer </span>
                 </div>
-            </div>
-        </section>
 
-        <!-- Featured External Works / Links -->
-        <section class="links-showcase py-5">
-            <div class="container text-center">
-                <h2>Our Favorite Projects & Platforms</h2>
-                <p>Check out some of our other creations and online pages:</p>
-                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                    <a href="https://vercel.com/la-code1/fancy-lips/B8tvdBMKdPv3JyLua74ir9EToDQX" target="_blank" class="external-link-btn"><i class="fa-solid fa-heart me-2"></i>Fancy Lips</a>
-                    <a href="https://vercel.com/la-code1/phemcard/C4t9VAdbhSphgJTybeCpQP2XqgZA" target="_blank" class="external-link-btn"><i class="fa-solid fa-id-card me-2"></i>My First Code</a>
-                    <a href="https://vercel.com/la-code1/ember-s-delight/4CR5raFjkxRuRCB4GzsMeKB5mPGB" target="_blank" class="external-link-btn"><i class="fa-solid fa-fire me-2"></i>Ember's Delights</a>
+                <div class="object-monogram">L<span>P</span></div>
+
+                <div class="object-bottom">
+                  <div>
+                    <div class="object-title">LA-PHÈMÉ</div>
+
+                    <div class="object-role">Web Developer / Creative</div>
+                  </div>
+
+                  <div class="object-mark">↗</div>
                 </div>
+              </div>
             </div>
+          </div>
         </section>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <div class="section-number">01 / APPROACH</div>
+            </div>
+
+            <div>
+              <h2 class="section-title">
+                Simple ideas.
+                <br />
+                Thoughtful execution.
+              </h2>
+
+              <p class="section-description">
+                I care about how a website looks, but also how it feels to use.
+                Every interaction has a reason, every element has a place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="contact-inner reveal">
+            <div class="section-number">02 / NEXT PROJECT</div>
+
+            <h2 class="contact-title">
+              Have something
+              <span>worth building?</span>
+            </h2>
+
+            <p class="contact-description">
+              Let's turn the idea into something real, useful and distinctly
+              yours.
+            </p>
+
+            <div class="contact-actions">
+              <a
+                href="contact.html"
+                class="button button-primary"
+                data-transition
+                data-magnetic
+              >
+                Let's Talk
+                <i class="ri-arrow-right-up-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer py-4">
-        <div class="container text-center">
-            <p>&copy; 2026 Ember's Delight. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/La-Pheme456" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="http://www.youtube.com/@La-phem" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="mailto:femilawal433@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-            </div>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-copy">
+            © 2026
+            <strong>LA-PHÈMÉ</strong>. Built with curiosity.
+          </div>
+
+          <div class="footer-links">
+            <a href="#" class="footer-link">
+              <i class="ri-github-line"></i>
+            </a>
+
+            <a href="#" class="footer-link">
+              <i class="ri-linkedin-line"></i>
+            </a>
+
+            <a href="#" class="footer-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
