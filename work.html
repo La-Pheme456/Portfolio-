@@ -5,6 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>try { if (localStorage.getItem("la-code-theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
     <title>Work — LA-Code</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,6 +77,9 @@
 
         <a href="contact.html" class="nav-cta" data-transition> Let's Talk </a>
 
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
+          <i class="ri-sun-line" aria-hidden="true"></i>
+        </button>
         <button class="menu-button">
           <i class="ri-menu-4-line"></i>
         </button>
@@ -97,6 +101,43 @@
         <a href="contact.html" class="mobile-link" data-transition> Contact </a>
       </div>
     </div>
+
+    <aside class="profile-panel" aria-label="La-Code profile">
+      <div class="profile-panel-top">
+        <a href="index.html" class="profile-brand-mark" data-transition aria-label="La-Code home">
+          <img src="img/logo.png" alt="" />
+        </a>
+        <span class="availability"><i></i> Creative practice</span>
+      </div>
+
+      <div class="profile-art" aria-hidden="true">
+        <div class="profile-art-orbit"></div>
+        <img src="img/logo.png" alt="" />
+        <span>LA-CODE</span>
+      </div>
+
+      <div class="profile-meta">
+        <div>
+          <h2>Lawal Oluwafemi</h2>
+          <p>LA-Code · Creative developer</p>
+        </div>
+        <span class="profile-index">01 / PROFILE</span>
+      </div>
+
+      <div class="profile-divider"></div>
+      <p class="profile-note">I enjoy turning rough ideas into websites people can actually use. I also like video editing and learning something new with every project.</p>
+
+      <div class="profile-bottom">
+        <a href="contact.html" class="profile-contact" data-transition>
+          Start a conversation <i class="ri-arrow-right-up-line"></i>
+        </a>
+        <nav class="profile-socials" aria-label="Social links">
+          <a href="https://github.com/La-Pheme456" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a>
+          <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+          <a href="https://www.youtube.com/@La-phem" target="_blank" rel="noopener" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </nav>
+      </div>
+    </aside>
 
     <main class="page">
       <div class="container">
@@ -122,30 +163,10 @@
 
         <section class="section">
           <div class="work-grid">
-            <article class="project-card reveal">
-              <div class="project-preview">
-                <div class="project-browser">
-                  <div class="browser-bar">
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                  </div>
-
-                  <div class="browser-content">
-                    <div class="browser-logo">FANCY LIPS</div>
-
-                    <div class="browser-heading"></div>
-
-                    <div class="browser-heading small"></div>
-
-                    <div class="browser-grid">
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <article id="fancy-lips" class="project-card reveal">
+              <div class="project-preview project-preview-image">
+  <img src="img/projects/fancy-lips.png" alt="Homepage screenshot of the Fancy Lips cosmetics website." loading="lazy" />
+</div>
 
               <div class="project-meta">
                 <div>
@@ -158,7 +179,7 @@
                 </div>
 
                 <a
-                  href="https://vercel.com/la-code1/fancy-lips/B8tvdBMKdPv3JyLua74ir9EToDQX"
+                  href="https://fancy-lips.vercel.app/"
                   class="project-link"
                   target="_blank"
                   rel="noopener"
@@ -174,30 +195,10 @@
               </div>
             </article>
 
-            <article class="project-card reveal delay-1">
-              <div class="project-preview">
-                <div class="project-browser">
-                  <div class="browser-bar">
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                  </div>
-
-                  <div class="browser-content">
-                    <div class="browser-logo">MYFIRSTCODE</div>
-
-                    <div class="browser-heading"></div>
-
-                    <div class="browser-heading small"></div>
-
-                    <div class="browser-grid">
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <article id="myfirstcode" class="project-card reveal delay-1">
+              <div class="project-preview project-preview-image">
+  <img src="img/projects/myfirstcode.png" alt="Screenshot of the MyFirstCode profile card design." loading="lazy" />
+</div>
 
               <div class="project-meta">
                 <div>
@@ -210,7 +211,7 @@
                 </div>
 
                 <a
-                  href="https://vercel.com/la-code1/phemcard/C4t9VAdbhSphgJTybeCpQP2XqgZA"
+                  href="https://phemcard.vercel.app/"
                   class="project-link"
                   target="_blank"
                   rel="noopener"
@@ -226,30 +227,10 @@
               </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-preview">
-                <div class="project-browser">
-                  <div class="browser-bar">
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                  </div>
-
-                  <div class="browser-content">
-                    <div class="browser-logo">EMBER&#39;S DELIGHT</div>
-
-                    <div class="browser-heading"></div>
-
-                    <div class="browser-heading small"></div>
-
-                    <div class="browser-grid">
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <article id="embers-delight" class="project-card reveal">
+              <div class="project-preview project-preview-image">
+  <img src="img/projects/embers-delight.png" alt="Homepage screenshot of the restaurant website." loading="lazy" />
+</div>
 
               <div class="project-meta">
                 <div>
@@ -262,7 +243,7 @@
                 </div>
 
                 <a
-                  href="https://vercel.com/la-code1/ember-s-delight/4CR5raFjkxRuRCB4GzsMeKB5mPGB"
+                  href="https://ember-s-delight.vercel.app/"
                   class="project-link"
                   target="_blank"
                   rel="noopener">
@@ -277,7 +258,7 @@
               </div>
             </article>
 
-            <article class="project-card reveal delay-1">
+            <article id="next-project" class="project-card reveal delay-1">
               <div class="project-preview">
                 <div class="project-browser">
                   <div class="browser-bar">
@@ -287,7 +268,7 @@
                   </div>
 
                   <div class="browser-content">
-                    <div class="browser-logo">NEXT PROJECT</div>
+                    <div class="browser-logo">YOUR PROJECT?</div>
 
                     <div class="browser-heading"></div>
 
@@ -304,7 +285,7 @@
 
               <div class="project-meta">
                 <div>
-                  <h2 class="project-title">Next Build</h2>
+                  <h2 class="project-title">Your next project?</h2>
 
                   <p class="project-description">
                     Currently exploring the next idea. More experiments,
@@ -318,7 +299,7 @@
               </div>
 
               <div class="project-tech">
-                <span>In Progress</span>
+                <span>Start a conversation</span>
               </div>
             </article>
           </div>

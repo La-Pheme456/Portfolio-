@@ -5,6 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>try { if (localStorage.getItem("la-code-theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
     <title>About — LA-Code</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,6 +77,9 @@
 
         <a href="contact.html" class="nav-cta" data-transition> Let's Talk </a>
 
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
+          <i class="ri-sun-line" aria-hidden="true"></i>
+        </button>
         <button class="menu-button">
           <i class="ri-menu-4-line"></i>
         </button>
@@ -97,6 +101,43 @@
         <a href="contact.html" class="mobile-link" data-transition> Contact </a>
       </div>
     </div>
+
+    <aside class="profile-panel" aria-label="La-Code profile">
+      <div class="profile-panel-top">
+        <a href="index.html" class="profile-brand-mark" data-transition aria-label="La-Code home">
+          <img src="img/logo.png" alt="" />
+        </a>
+        <span class="availability"><i></i> Creative practice</span>
+      </div>
+
+      <div class="profile-art" aria-hidden="true">
+        <div class="profile-art-orbit"></div>
+        <img src="img/logo.png" alt="" />
+        <span>LA-CODE</span>
+      </div>
+
+      <div class="profile-meta">
+        <div>
+          <h2>Lawal Oluwafemi</h2>
+          <p>LA-Code · Creative developer</p>
+        </div>
+        <span class="profile-index">01 / PROFILE</span>
+      </div>
+
+      <div class="profile-divider"></div>
+      <p class="profile-note">I enjoy turning rough ideas into websites people can actually use. I also like video editing and learning something new with every project.</p>
+
+      <div class="profile-bottom">
+        <a href="contact.html" class="profile-contact" data-transition>
+          Start a conversation <i class="ri-arrow-right-up-line"></i>
+        </a>
+        <nav class="profile-socials" aria-label="Social links">
+          <a href="https://github.com/La-Pheme456" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a>
+          <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+          <a href="https://www.youtube.com/@La-phem" target="_blank" rel="noopener" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </nav>
+      </div>
+    </aside>
 
     <main class="page">
       <div class="container">
@@ -130,7 +171,7 @@
 
             <div class="about-text reveal delay-1">
               <p>
-                I'm Lawal Oluwafemi, professionally known as LA-PHÈMÉ. I enjoy
+                I'm Lawal Oluwafemi, and I share my creative work as LA-Code. I enjoy
                 taking an idea that starts as a simple thought and turning it
                 into something people can actually use.
               </p>

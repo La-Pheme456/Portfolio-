@@ -1,4 +1,74 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.querySelector(".theme-toggle");
+  const themeIcon = themeToggle?.querySelector("i");
+
+  const updateThemeControl = (theme) => {
+    document.documentElement.dataset.theme = theme;
+    if (!themeToggle || !themeIcon) return;
+
+    const lightMode = theme === "light";
+    themeIcon.className = lightMode ? "ri-moon-line" : "ri-sun-line";
+    themeToggle.setAttribute("aria-label", lightMode ? "Switch to dark mode" : "Switch to light mode");
+    themeToggle.setAttribute("title", lightMode ? "Switch to dark mode" : "Switch to light mode");
+    themeToggle.setAttribute("aria-pressed", String(lightMode));
+  };
+
+  updateThemeControl(document.documentElement.dataset.theme === "light" ? "light" : "dark");
+
+  themeToggle?.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    updateThemeControl(nextTheme);
+    try {
+      localStorage.setItem("la-code-theme", nextTheme);
+    } catch {}
+  });
+  const carousel = document.querySelector(".home-3d-carousel");
+  const carouselStage = carousel?.querySelector("[data-carousel-stage]");
+  const carouselWindow = carousel?.querySelector("[data-carousel-window]");
+  const carouselTrack = carousel?.querySelector("[data-carousel-track]");
+  const carouselProgress = carousel?.querySelector("[data-carousel-progress]");
+  const carouselCards = carouselTrack ? [...carouselTrack.querySelectorAll(".carousel-card")] : [];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (carousel && carouselStage && carouselWindow && carouselTrack && carouselCards.length && !reduceMotion) {
+    const stageOffset = carouselStage.getBoundingClientRect().top - carousel.getBoundingClientRect().top;
+    let carouselFrame = 0;
+
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+    const renderCarousel = () => {
+      carouselFrame = 0;
+      const sectionTop = carousel.getBoundingClientRect().top + window.scrollY;
+      const sectionBottom = sectionTop + carousel.offsetHeight;
+      const stickyTop = parseFloat(window.getComputedStyle(carouselStage).top) || 0;
+      const start = sectionTop + stageOffset - stickyTop;
+      const end = sectionBottom - carouselStage.offsetHeight - stickyTop;
+      const progress = clamp((window.scrollY - start) / Math.max(1, end - start), 0, 1);
+      const maxTravel = Math.max(0, carouselTrack.scrollWidth - carouselWindow.clientWidth);
+      const viewport = carouselWindow.getBoundingClientRect();
+      const center = viewport.left + viewport.width / 2;
+
+      carouselTrack.style.transform = `translate3d(${-maxTravel * progress}px, 0, 0)`;
+      if (carouselProgress) carouselProgress.style.transform = `scaleX(${progress})`;
+
+      carouselCards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const distance = clamp((rect.left + rect.width / 2 - center) / Math.max(1, viewport.width / 2), -1.5, 1.5);
+        const rotateY = clamp(-distance * 19, -29, 29);
+        const depth = Math.max(0, 34 - Math.abs(distance) * 22);
+        const scale = 1 - Math.min(0.07, Math.abs(distance) * 0.035);
+        card.style.transform = `perspective(1400px) rotateY(${rotateY}deg) translateZ(${depth}px) scale(${scale})`;
+      });
+    };
+
+    const queueCarouselRender = () => {
+      if (!carouselFrame) carouselFrame = window.requestAnimationFrame(renderCarousel);
+    };
+
+    window.addEventListener("scroll", queueCarouselRender, { passive: true });
+    window.addEventListener("resize", queueCarouselRender);
+    queueCarouselRender();
+  }
   const loader = document.querySelector(".loader");
 
   window.addEventListener("load", () => {
@@ -242,16 +312,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (header) {
     let lastScrollY = window.scrollY;
     let scrollTicking = false;
+    const profilePanel = document.querySelector(".profile-panel");
 
     const updateHeader = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY <= 20) {
         header.classList.remove("header-hidden");
+        profilePanel?.classList.remove("is-header-hidden");
       } else if (currentScrollY > lastScrollY && currentScrollY > 90) {
         header.classList.add("header-hidden");
+        profilePanel?.classList.add("is-header-hidden");
       } else if (currentScrollY < lastScrollY) {
         header.classList.remove("header-hidden");
+        profilePanel?.classList.remove("is-header-hidden");
       }
 
       lastScrollY = currentScrollY;

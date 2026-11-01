@@ -5,6 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>try { if (localStorage.getItem("la-code-theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
     <title>LA-Code — Creative Web Developer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -87,6 +88,9 @@
           Let's Talk
         </a>
 
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
+          <i class="ri-sun-line" aria-hidden="true"></i>
+        </button>
         <button class="menu-button" aria-label="Open menu">
           <i class="ri-menu-4-line"></i>
         </button>
@@ -109,75 +113,76 @@
       </div>
     </div>
 
+    <aside class="profile-panel" aria-label="La-Code profile">
+      <div class="profile-panel-top">
+        <a href="index.html" class="profile-brand-mark" data-transition aria-label="La-Code home">
+          <img src="img/logo.png" alt="" />
+        </a>
+        <span class="availability"><i></i> Creative practice</span>
+      </div>
+
+      <div class="profile-art" aria-hidden="true">
+        <div class="profile-art-orbit"></div>
+        <img src="img/logo.png" alt="" />
+        <span>LA-CODE</span>
+      </div>
+
+      <div class="profile-meta">
+        <div>
+          <h2>Lawal Oluwafemi</h2>
+          <p>LA-Code · Creative developer</p>
+        </div>
+        <span class="profile-index">01 / PROFILE</span>
+      </div>
+
+      <div class="profile-divider"></div>
+      <p class="profile-note">I enjoy turning rough ideas into websites people can actually use. I also like video editing and learning something new with every project.</p>
+
+      <div class="profile-bottom">
+        <a href="contact.html" class="profile-contact" data-transition>
+          Start a conversation <i class="ri-arrow-right-up-line"></i>
+        </a>
+        <nav class="profile-socials" aria-label="Social links">
+          <a href="https://github.com/La-Pheme456" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a>
+          <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+          <a href="https://www.youtube.com/@La-phem" target="_blank" rel="noopener" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </nav>
+      </div>
+    </aside>
+
     <main class="page">
       <div class="container">
-        <section class="hero">
-          <div>
+        <section class="hero home-showcase" aria-labelledby="home-title">
+          <div class="hero-main">
+            <div class="hero-orb" aria-hidden="true"><span></span></div>
+
             <div class="hero-kicker reveal">
               <span class="kicker-line"></span>
-              Creative Web Developer
+              Independent creative / Nigeria
             </div>
 
-            <h1 class="reveal delay-1">
-              I build
-
-              <span class="light"> digital </span>
-
-              <span class="accent"> experiences. </span>
+            <h1 id="home-title" class="hero-title reveal delay-1">
+              I'm <span class="light">Lawal</span><br />
+              Oluwafemi<span class="accent">.</span>
             </h1>
 
+            <p class="hero-specialty reveal delay-2">Creative developer <span>·</span> digital designer</p>
             <p class="hero-copy reveal delay-2">
-              I'm Lawal Oluwafemi — professionally known as
-              <strong>La-Code</strong>. I design and develop responsive,
-              purposeful websites where technology meets visual creativity.
+              I like taking rough ideas and turning them into clear, useful websites. I'm still learning with every project, and that's part of what keeps me excited to build.
             </p>
 
             <div class="hero-actions reveal delay-3">
-              <a
-                href="work.html"
-                class="button button-primary"
-                data-transition
-                data-magnetic>
-                Explore My Work
-                <i class="ri-arrow-right-up-line"></i>
+              <a href="work.html" class="button button-primary" data-transition data-magnetic>
+                Explore my work <i class="ri-arrow-right-up-line"></i>
               </a>
-
-              <a
-                href="contact.html"
-                class="button button-outline"
-                data-transition>
-                Start a Conversation
-              </a>
+              <a href="contact.html" class="button button-outline" data-transition>Let's talk</a>
             </div>
-          </div>
 
-          <div class="hero-object reveal delay-2">
-            <div class="object-shadow"></div>
-
-            <div class="object" data-tilt>
-              <div class="object-grid"></div>
-
-              <div class="object-content">
-                <div class="object-top">
-                  <span> LA-CODE / 001 </span>
-
-                  <span> Developer </span>
-                </div>
-
-                <div class="object-monogram">
-                  <img src="img/logo.png" alt="La-Code logo" />
-                </div>
-
-                <div class="object-bottom">
-                  <div>
-                    <div class="object-title">LA-CODE</div>
-
-                    <div class="object-role">Web Developer / Creative</div>
-                  </div>
-
-                  <div class="object-mark">↗</div>
-                </div>
-              </div>
+            <div class="hero-caption reveal delay-3">
+              <span>Selected work &amp; experiments</span>
+              <span class="caption-line"></span>
+              <span>Scroll to explore <i class="ri-arrow-down-line"></i></span>
+              
             </div>
           </div>
         </section>
@@ -206,10 +211,106 @@
         </div>
       </section>
 
+      <section class="section home-services">
+        <div class="container">
+          <div class="section-header reveal">
+            <div><div class="section-number">02 / WHAT I DO</div></div>
+            <div>
+              <h2 class="section-title">Digital work<br />with purpose.</h2>
+              <p class="section-description">From the first layout to the final interaction, I build clear, responsive experiences with care.</p>
+            </div>
+          </div>
+          <div class="services home-services-grid">
+            <article class="service-card reveal">
+              <span class="service-number">01 / BUILD</span>
+              <div class="service-icon"><i class="ri-code-s-slash-line"></i></div>
+              <h3>Frontend development</h3>
+              <p>Responsive websites built with clean HTML, CSS and JavaScript.</p>
+              <a href="services.html" class="service-more" data-transition>Explore service <i class="ri-arrow-right-up-line"></i></a>
+            </article>
+            <article class="service-card reveal delay-1">
+              <span class="service-number">02 / DESIGN</span>
+              <div class="service-icon"><i class="ri-layout-4-line"></i></div>
+              <h3>Interface design</h3>
+              <p>Thoughtful layouts that make information clear and easy to use.</p>
+              <a href="services.html" class="service-more" data-transition>Explore service <i class="ri-arrow-right-up-line"></i></a>
+            </article>
+            <article class="service-card reveal delay-2">
+              <span class="service-number">03 / REFINE</span>
+              <div class="service-icon"><i class="ri-movie-line"></i></div>
+              <h3>Visual storytelling</h3>
+              <p>Video editing and motion-minded details for digital content.</p>
+              <a href="services.html" class="service-more" data-transition>Explore service <i class="ri-arrow-right-up-line"></i></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-selected-work home-3d-carousel" id="selected-work" aria-labelledby="selected-work-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div><div class="section-number">03 / SELECTED WORK</div></div>
+            <div>
+              <h2 class="section-title" id="selected-work-title">A few things<br />I've built.</h2>
+              <p class="section-description">Scroll through a few projects by Lawal Oluwafemi. The carousel moves with your scroll and reverses as you scroll back.</p>
+            </div>
+          </div>
+
+          <div class="carousel-stage" data-carousel-stage role="region" aria-label="Selected projects by Lawal Oluwafemi">
+            <div class="carousel-window" data-carousel-window>
+              <div class="carousel-track" data-carousel-track>
+                <a class="carousel-card carousel-card--lips" href="https://fancy-lips.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <div class="carousel-card-art carousel-card-art--image">
+  <img src="img/projects/fancy-lips.png" alt="Fancy Lips homepage screenshot." loading="lazy" />
+  <span class="carousel-art-label">PRODUCT / DIGITAL EXPERIENCE</span>
+  <span class="carousel-art-index">01 — 03</span>
+</div>
+                  <div class="carousel-card-copy">
+                    <div><span class="carousel-card-kicker">PRODUCT WEBSITE</span><h3>Fancy Lips</h3></div>
+                    <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    <p>A product-focused website built around a strong visual identity and responsive interface.</p>
+                  </div>
+                </a>
+
+                <a class="carousel-card carousel-card--code" href="https://phemcard.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <div class="carousel-card-art carousel-card-art--image">
+  <img src="img/projects/myfirstcode.png" alt="MyFirstCode profile card screenshot." loading="lazy" />
+  <span class="carousel-art-label">PERSONAL PROJECT / WEB</span>
+  <span class="carousel-art-index">02 — 03</span>
+</div>
+                  <div class="carousel-card-copy">
+                    <div><span class="carousel-card-kicker">PERSONAL PROJECT</span><h3>MyFirstCode</h3></div>
+                    <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    <p>A personal project exploring clean structure, readable content and a simple digital identity.</p>
+                  </div>
+                </a>
+
+                <a class="carousel-card carousel-card--ember" href="https://ember-s-delight.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <div class="carousel-card-art carousel-card-art--image">
+  <img src="img/projects/embers-delight.png" alt="Ember Delight restaurant homepage screenshot." loading="lazy" />
+  <span class="carousel-art-label">HOSPITALITY / CONCEPT</span>
+  <span class="carousel-art-index">03 — 03</span>
+</div>
+                  <div class="carousel-card-copy">
+                    <div><span class="carousel-card-kicker">RESTAURANT CONCEPT</span><h3>Ember's Delight</h3></div>
+                    <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    <p>A restaurant concept focused on atmosphere, clear content and a warm digital experience.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-footer">
+              <div class="carousel-progress" aria-hidden="true"><span data-carousel-progress></span></div>
+            </div>
+          </div>
+
+          <a class="home-work-link" href="work.html" data-transition>View all selected work <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </section>
       <section class="page-extra">
         <div class="container">
           <div class="page-extra-inner reveal">
-            <div class="section-number">03 / WHAT MATTERS</div>
+            <div class="section-number">04 / WHAT MATTERS</div>
             <p>
               I try to keep my work clear from the first click to the last. Good
               design should help people find what they need without making them
@@ -227,7 +328,7 @@
       <section class="contact">
         <div class="container">
           <div class="contact-inner reveal">
-            <div class="section-number">02 / NEXT PROJECT</div>
+            <div class="section-number">05 / NEXT PROJECT</div>
 
             <h2 class="contact-title">
               Have something
