@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script>try { if (localStorage.getItem("la-code-theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
-    <title>Work — LA-Code</title>
+    <title>Projects — Lawal Oluwafemi (LA-Code)</title>
+    <meta name="description" content="Selected web projects by Lawal Oluwafemi (LA-Code), including Fancy Lips, Ember's Delight and Phemcard." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -80,13 +81,13 @@
         <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
           <i class="ri-sun-line" aria-hidden="true"></i>
         </button>
-        <button class="menu-button">
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
           <i class="ri-menu-4-line"></i>
         </button>
       </nav>
     </header>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-navigation">
       <div class="mobile-links">
         <a href="index.html" class="mobile-link" data-transition> Home </a>
 
@@ -119,13 +120,13 @@
       <div class="profile-meta">
         <div>
           <h2>Lawal Oluwafemi</h2>
-          <p>LA-Code · Creative developer</p>
+          <p>LA-Code · Frontend developer</p>
         </div>
         <span class="profile-index">01 / PROFILE</span>
       </div>
 
       <div class="profile-divider"></div>
-      <p class="profile-note">I enjoy turning rough ideas into websites people can actually use. I also like video editing and learning something new with every project.</p>
+      <p class="profile-note">I build responsive websites and enjoy solving frontend problems as I grow my skills.</p>
 
       <div class="profile-bottom">
         <a href="contact.html" class="profile-contact" data-transition>
@@ -133,7 +134,7 @@
         </a>
         <nav class="profile-socials" aria-label="Social links">
           <a href="https://github.com/La-Pheme456" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a>
-          <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+          <a href="https://www.tiktok.com/@lapheme0.1" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
           <a href="https://www.youtube.com/@La-phem" target="_blank" rel="noopener" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
         </nav>
       </div>
@@ -173,63 +174,43 @@
                   <h2 class="project-title">Fancy Lips</h2>
 
                   <p class="project-description">
-                    A product-focused website built around a strong visual
-                    identity and responsive interface.
+                    A responsive cosmetics storefront that presents products, supports cart interactions and lets customers complete checkout through WhatsApp.
                   </p>
                 </div>
 
-                <a
-                  href="https://fancy-lips.vercel.app/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Open Fancy Lips">
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
               </div>
 
               <div class="project-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
               </div>
+              <a class="project-live-link" href="https://fancy-lips.vercel.app/" target="_blank" rel="noopener noreferrer">View live website <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
             </article>
 
-            <article id="myfirstcode" class="project-card reveal delay-1">
+            <article id="phemcard" class="project-card reveal delay-1">
               <div class="project-preview project-preview-image">
-  <img src="img/projects/myfirstcode.png" alt="Screenshot of the MyFirstCode profile card design." loading="lazy" />
+  <img src="img/projects/myfirstcode.png" alt="Phemcard digital profile card interface screenshot." loading="lazy" />
 </div>
 
               <div class="project-meta">
                 <div>
-                  <h2 class="project-title">MyFirstCode</h2>
+                  <h2 class="project-title">Phemcard</h2>
 
                   <p class="project-description">
-                    A personal project built to explore clean structure,
-                    readable content and a simple digital identity.
+                    A personal digital card with a compact profile layout and social links, built to present a personal identity in one place.
                   </p>
                 </div>
 
-                <a
-                  href="https://phemcard.vercel.app/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Open MyFirstCode">
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
               </div>
 
               <div class="project-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
               </div>
+              <a class="project-live-link" href="https://phemcard.vercel.app/" target="_blank" rel="noopener noreferrer">View live website <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
             </article>
 
             <article id="embers-delight" class="project-card reveal">
               <div class="project-preview project-preview-image">
-  <img src="img/projects/embers-delight.png" alt="Homepage screenshot of the restaurant website." loading="lazy" />
+  <img src="img/projects/embers-delight.png" alt="Ember's Delight restaurant homepage screenshot." loading="lazy" />
 </div>
 
               <div class="project-meta">
@@ -237,71 +218,18 @@
                   <h2 class="project-title">Ember&#39;s Delight</h2>
 
                   <p class="project-description">
-                    A restaurant website concept focused on atmosphere, clear
-                    content and a warm digital experience.
+                    A restaurant business website concept that presents the brand and menu and gives visitors a clear way to enquire or book.
                   </p>
                 </div>
 
-                <a
-                  href="https://ember-s-delight.vercel.app/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener">
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
               </div>
 
               <div class="project-tech">
-                <span>Brand</span>
-                <span>Frontend</span>
-                <span>Interaction</span>
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
               </div>
+              <a class="project-live-link" href="https://ember-s-delight.vercel.app/" target="_blank" rel="noopener noreferrer">View live website <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
             </article>
 
-            <article id="next-project" class="project-card reveal delay-1">
-              <div class="project-preview">
-                <div class="project-browser">
-                  <div class="browser-bar">
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                  </div>
-
-                  <div class="browser-content">
-                    <div class="browser-logo">YOUR PROJECT?</div>
-
-                    <div class="browser-heading"></div>
-
-                    <div class="browser-heading small"></div>
-
-                    <div class="browser-grid">
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                      <div class="browser-box"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-meta">
-                <div>
-                  <h2 class="project-title">Your next project?</h2>
-
-                  <p class="project-description">
-                    Currently exploring the next idea. More experiments,
-                    interfaces and systems ahead.
-                  </p>
-                </div>
-
-                <a href="contact.html" class="project-link" data-transition>
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
-              </div>
-
-              <div class="project-tech">
-                <span>Start a conversation</span>
-              </div>
-            </article>
           </div>
         </section>
 
@@ -337,7 +265,7 @@
             </a>
 
             <a
-              href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&sender_device=pc"
+              href="https://www.tiktok.com/@lapheme0.1"
               class="footer-link"
               target="_blank"
               rel="noopener"
@@ -346,7 +274,7 @@
             </a>
 
             <a
-              href="http://www.youtube.com/@La-phem"
+              href="https://www.youtube.com/@La-phem"
               class="footer-link"
               target="_blank"
               rel="noopener"

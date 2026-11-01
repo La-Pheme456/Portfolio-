@@ -312,7 +312,7 @@ header {
   font-size: 12px;
   font-weight: 600;
 
-  color: white;
+  color: var(--white);
 
   overflow: hidden;
 }
@@ -424,7 +424,7 @@ header {
 
   background: transparent;
 
-  color: white;
+  color: var(--white);
 
   cursor: pointer;
 }
@@ -964,6 +964,14 @@ header {
   border-top: 1px solid var(--line);
 }
 
+.skill-group-title {
+  padding: 22px 0 8px;
+  color: var(--purple-light);
+  font: 600 12px/1.5 "Inter", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .skill-row {
   display: grid;
 
@@ -1330,6 +1338,23 @@ header {
   font-size: 9px;
 
   border-radius: 5px;
+}
+
+.project-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  color: var(--purple-light);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-live-link:hover { color: var(--white); }
+
+:focus-visible {
+  outline: 2px solid var(--purple-light);
+  outline-offset: 4px;
 }
 
 /* ================ CONTACT ================ */
@@ -2964,6 +2989,153 @@ footer {
 }
 
 .project-card:hover .project-preview-image img { transform: scale(1.035); }
+
+/* Keep the existing layout comfortable on tablets and compact phones. */
+@media (min-width: 601px) and (max-width: 1080px) {
+  .work-grid,
+  .services:not(.home-services-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work-grid { gap: 36px 20px; }
+
+  .skill-row {
+    grid-template-columns: 42px minmax(0, 1fr) minmax(125px, 0.75fr);
+    gap: 16px;
+    padding-block: 12px;
+  }
+
+  .skill-description {
+    display: block;
+    font-size: 12px;
+  }
+
+  .carousel-card {
+    flex-basis: clamp(300px, 66vw, 500px);
+    min-height: 410px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container { width: calc(100% - 32px); }
+  header .nav { width: calc(100% - 20px); padding-inline: 10px; }
+  .brand { gap: 8px; font-size: 14px; }
+  .profile-panel { padding-inline: clamp(12px, 4vw, 18px); }
+
+  .home-showcase .hero-main {
+    min-height: 0;
+    padding-block: 38px 12px;
+  }
+
+  .home-showcase .hero-title {
+    font-size: clamp(44px, 12.2vw, 66px);
+    letter-spacing: -0.065em;
+    overflow-wrap: anywhere;
+  }
+
+  .home-showcase .hero-copy {
+    max-width: 58ch;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .hero-caption {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+    font-size: 10px;
+  }
+
+  .page-intro { min-height: 0; padding-block: 68px 34px; }
+  .page-intro h1 { font-size: clamp(39px, 11vw, 55px); letter-spacing: -0.055em; }
+  .page-intro p { margin-top: 18px; }
+  .section { padding-block: 56px; }
+  .section-title { font-size: clamp(34px, 9vw, 43px); letter-spacing: -0.055em; }
+  .section-header { gap: 18px; margin-bottom: 28px; }
+  .about-layout { gap: 28px; }
+  .about-text { gap: 18px; }
+  .about-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fact { padding-right: 8px; }
+  .fact:not(:first-child) { padding-left: 10px; }
+  .fact strong { font-size: 23px; }
+  .fact span { font-size: 8px; letter-spacing: 0.04em; }
+
+  .skill-row {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 5px 10px;
+    min-height: 0;
+    padding-block: 14px;
+  }
+
+  .skill-name { font-size: 20px; }
+  .skill-description { display: block; grid-column: 2; font-size: 13px; }
+  .skill-row:hover { padding-inline: 8px; }
+  .work-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .project-title { font-size: 23px; }
+  .project-description { font-size: 14px; line-height: 1.65; }
+  .contact-title { font-size: clamp(42px, 11vw, 60px); letter-spacing: -0.055em; }
+  .contact-description { margin-top: 18px; }
+  .contact-actions { gap: 10px; }
+  .contact-actions .button { max-width: 100%; min-height: 46px; overflow-wrap: anywhere; }
+  .enquiry-form { width: 100%; gap: 12px; }
+  .enquiry-field { min-width: 0; font-size: 16px; }
+  .footer-inner { flex-wrap: wrap; gap: 12px; padding-inline: 16px; }
+
+  .carousel-stage {
+    height: min(430px, calc(100vh - var(--nav-height) - var(--mobile-profile-height) - 28px));
+    min-height: 330px;
+  }
+
+  .carousel-card {
+    flex-basis: min(88vw, 370px);
+    min-height: 0;
+    grid-template-rows: minmax(165px, auto) auto;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .carousel-card-art,
+  .carousel-card-art--image { min-height: 165px; }
+  .carousel-card-copy { padding: 2px 8px 8px; }
+  .carousel-card-copy p { font-size: 14px; line-height: 1.55; }
+  .carousel-art-label { top: 12px; left: 12px; font-size: 9px; }
+  .carousel-art-index { right: 12px; bottom: 12px; font-size: 9px; }
+}
+
+@media (max-width: 360px) {
+  header .nav { gap: 6px; }
+  .brand { gap: 6px; font-size: 13px; }
+  .brand-mark { width: 28px; height: 28px; }
+  .theme-toggle,
+  .menu-button { width: 36px; height: 36px; }
+  .profile-meta h2 { font-size: 12px; }
+  .profile-meta p { font-size: 9px; }
+  .home-showcase .hero-title { font-size: 43px; }
+  .carousel-card-copy { grid-template-columns: minmax(0, 1fr) 20px; column-gap: 8px; }
+  .carousel-card-kicker { font-size: 9px; }
+}
+
+@media (max-height: 500px) and (min-width: 601px) {
+  .home-3d-carousel { min-height: 150vh; }
+  .carousel-stage { position: relative; top: auto; height: auto; min-height: 0; }
+  .carousel-card { min-height: 360px; }
+}
+
+@media (max-height: 500px) and (max-width: 600px) {
+  .home-3d-carousel { min-height: auto; padding-block: 42px; }
+  .home-3d-carousel > .container { min-height: 0; }
+  .carousel-stage { position: relative; top: auto; height: auto; min-height: 0; }
+  .carousel-card-art,
+  .carousel-card-art--image { min-height: 140px; }
+}
+
+/* The desktop rail must not reserve space once it becomes a mobile header. */
+@media (max-width: 1080px) {
+  :root { --sidebar-width: 0px; }
+  header { left: 0; width: 100%; }
+  main.page,
+  footer { margin-left: 0; }
+}
 
 .carousel-card-art--image {
   display: block;

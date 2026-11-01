@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script>try { if (localStorage.getItem("la-code-theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
-    <title>LA-Code — Creative Web Developer</title>
+    <title>Lawal Oluwafemi (LA-Code) — Frontend Developer &amp; Web Designer</title>
+    <meta name="description" content="Lawal Oluwafemi (LA-Code) is a frontend developer and web designer building responsive, useful websites for businesses and individuals with HTML, CSS, Bootstrap and Git." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -91,13 +92,13 @@
         <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
           <i class="ri-sun-line" aria-hidden="true"></i>
         </button>
-        <button class="menu-button" aria-label="Open menu">
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
           <i class="ri-menu-4-line"></i>
         </button>
       </nav>
     </header>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-navigation">
       <div class="mobile-links">
         <a href="index.html" class="mobile-link" data-transition> Home </a>
 
@@ -130,13 +131,13 @@
       <div class="profile-meta">
         <div>
           <h2>Lawal Oluwafemi</h2>
-          <p>LA-Code · Creative developer</p>
+          <p>LA-Code · Frontend developer</p>
         </div>
         <span class="profile-index">01 / PROFILE</span>
       </div>
 
       <div class="profile-divider"></div>
-      <p class="profile-note">I enjoy turning rough ideas into websites people can actually use. I also like video editing and learning something new with every project.</p>
+      <p class="profile-note">I build responsive websites and enjoy solving frontend problems as I grow my skills.</p>
 
       <div class="profile-bottom">
         <a href="contact.html" class="profile-contact" data-transition>
@@ -144,7 +145,7 @@
         </a>
         <nav class="profile-socials" aria-label="Social links">
           <a href="https://github.com/La-Pheme456" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a>
-          <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+          <a href="https://www.tiktok.com/@lapheme0.1" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
           <a href="https://www.youtube.com/@La-phem" target="_blank" rel="noopener" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
         </nav>
       </div>
@@ -158,7 +159,7 @@
 
             <div class="hero-kicker reveal">
               <span class="kicker-line"></span>
-              Independent creative / Nigeria
+              Frontend Developer &amp; Web Designer
             </div>
 
             <h1 id="home-title" class="hero-title reveal delay-1">
@@ -166,16 +167,16 @@
               Oluwafemi<span class="accent">.</span>
             </h1>
 
-            <p class="hero-specialty reveal delay-2">Creative developer <span>·</span> digital designer</p>
+            <p class="hero-specialty reveal delay-2">Lawal Oluwafemi <span>·</span> LA-Code</p>
             <p class="hero-copy reveal delay-2">
-              I like taking rough ideas and turning them into clear, useful websites. I'm still learning with every project, and that's part of what keeps me excited to build.
+              I build responsive, functional and visually considered websites for businesses and individuals. I work with HTML, CSS, Bootstrap and Git/GitHub, and I'm currently learning React. I bring care for detail, a design eye and a willingness to keep learning to a frontend team.
             </p>
 
             <div class="hero-actions reveal delay-3">
               <a href="work.html" class="button button-primary" data-transition data-magnetic>
-                Explore my work <i class="ri-arrow-right-up-line"></i>
+                View My Projects <i class="ri-arrow-right-up-line"></i>
               </a>
-              <a href="contact.html" class="button button-outline" data-transition>Let's talk</a>
+              <a href="contact.html" class="button button-outline" data-transition>Contact Me</a>
             </div>
 
             <div class="hero-caption reveal delay-3">
@@ -274,14 +275,14 @@
 
                 <a class="carousel-card carousel-card--code" href="https://phemcard.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <div class="carousel-card-art carousel-card-art--image">
-  <img src="img/projects/myfirstcode.png" alt="MyFirstCode profile card screenshot." loading="lazy" />
+  <img src="img/projects/myfirstcode.png" alt="Phemcard digital profile card screenshot." loading="lazy" />
   <span class="carousel-art-label">PERSONAL PROJECT / WEB</span>
   <span class="carousel-art-index">02 — 03</span>
 </div>
                   <div class="carousel-card-copy">
-                    <div><span class="carousel-card-kicker">PERSONAL PROJECT</span><h3>MyFirstCode</h3></div>
+                    <div><span class="carousel-card-kicker">PERSONAL PROJECT</span><h3>Phemcard</h3></div>
                     <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-                    <p>A personal project exploring clean structure, readable content and a simple digital identity.</p>
+                    <p>A digital profile card that brings a personal introduction and social links together.</p>
                   </div>
                 </a>
 
@@ -294,7 +295,7 @@
                   <div class="carousel-card-copy">
                     <div><span class="carousel-card-kicker">RESTAURANT CONCEPT</span><h3>Ember's Delight</h3></div>
                     <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
-                    <p>A restaurant concept focused on atmosphere, clear content and a warm digital experience.</p>
+                    <p>A restaurant website concept for presenting a brand and its menu with clear enquiry paths.</p>
                   </div>
                 </a>
               </div>
@@ -373,12 +374,12 @@
               <i class="ri-github-line"></i>
             </a>
 
-            <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&sender_device=pc" class="footer-link" target="_blank" rel="noopener" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@lapheme0.1" class="footer-link" target="_blank" rel="noopener" aria-label="TikTok">
               <i class="ri-tiktok-line"></i>
             </a>
 
             <a
-              href="http://www.youtube.com/@La-phem"
+              href="https://www.youtube.com/@La-phem"
               class="footer-link"
               target="_blank"
               rel="noopener"

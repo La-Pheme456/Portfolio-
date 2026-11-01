@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>try { if (localStorage.getItem("la-code-theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
-    <title>Contact — LA-Code</title>
+    <title>Contact Lawal Oluwafemi (LA-Code)</title>
+    <meta name="description" content="Contact Lawal Oluwafemi (LA-Code) about frontend opportunities, website projects and collaborations." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,13 +70,13 @@
         <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
           <i class="ri-sun-line" aria-hidden="true"></i>
         </button>
-        <button class="menu-button">
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
           <i class="ri-menu-4-line"></i>
         </button>
       </nav>
     </header>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-navigation">
       <div class="mobile-links">
         <a href="index.html" class="mobile-link" data-transition> Home </a>
 
@@ -108,13 +109,13 @@
       <div class="profile-meta">
         <div>
           <h2>Lawal Oluwafemi</h2>
-          <p>LA-Code · Creative developer</p>
+          <p>LA-Code · Frontend developer</p>
         </div>
         <span class="profile-index">01 / PROFILE</span>
       </div>
 
       <div class="profile-divider"></div>
-      <p class="profile-note">I enjoy turning rough ideas into websites people can actually use. I also like video editing and learning something new with every project.</p>
+      <p class="profile-note">I build responsive websites and enjoy solving frontend problems as I grow my skills.</p>
 
       <div class="profile-bottom">
         <a href="contact.html" class="profile-contact" data-transition>
@@ -122,7 +123,7 @@
         </a>
         <nav class="profile-socials" aria-label="Social links">
           <a href="https://github.com/La-Pheme456" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a>
-          <a href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+          <a href="https://www.tiktok.com/@lapheme0.1" target="_blank" rel="noopener" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
           <a href="https://www.youtube.com/@La-phem" target="_blank" rel="noopener" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
         </nav>
       </div>
@@ -183,7 +184,7 @@
               </a>
 
               <a
-                href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&sender_device=pc"
+                href="https://www.tiktok.com/@lapheme0.1"
                 class="button button-outline"
                 target="_blank"
                 rel="noopener">
@@ -192,7 +193,7 @@
               </a>
 
               <a
-                href="http://www.youtube.com/@La-phem"
+                href="https://www.youtube.com/@La-phem"
                 class="button button-outline"
                 target="_blank"
                 rel="noopener">
@@ -205,20 +206,20 @@
               <input
                 class="enquiry-field"
                 type="text"
-                id="enquiry-name"
+                id="enquiry-name" aria-label="Your name"
                 name="name"
                 placeholder="Your name"
                 required />
               <input
                 class="enquiry-field"
                 type="email"
-                id="enquiry-email"
+                id="enquiry-email" aria-label="Your email"
                 name="email"
                 placeholder="Your email"
                 required />
               <textarea
                 class="enquiry-field enquiry-message"
-                id="enquiry-message"
+                id="enquiry-message" aria-label="Project details"
                 name="message"
                 placeholder="Tell me a little about your project"
                 required></textarea>
@@ -260,7 +261,7 @@
             </a>
 
             <a
-              href="https://www.tiktok.com/@lapheme0.1?is_from_webapp=1&sender_device=pc"
+              href="https://www.tiktok.com/@lapheme0.1"
               class="footer-link"
               target="_blank"
               rel="noopener"
@@ -269,7 +270,7 @@
             </a>
 
             <a
-              href="http://www.youtube.com/@La-phem"
+              href="https://www.youtube.com/@La-phem"
               class="footer-link"
               target="_blank"
               rel="noopener"
