@@ -1340,17 +1340,87 @@ header {
   border-radius: 5px;
 }
 
-.project-live-link {
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.project-live-link,
+.project-source-link {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 14px;
   color: var(--purple-light);
   font-size: 13px;
   font-weight: 600;
 }
 
-.project-live-link:hover { color: var(--white); }
+.project-live-link:hover,
+.project-source-link:hover { color: var(--white); }
+
+.project-contribution {
+  max-width: 460px;
+  margin-top: 11px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.project-contribution strong { color: var(--white); font-weight: 600; }
+
+.project-walkthrough {
+  margin-top: 15px;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+}
+
+.project-walkthrough summary {
+  width: fit-content;
+  padding-block: 12px 3px;
+  color: var(--purple-light);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-walkthrough ol {
+  display: grid;
+  gap: 7px;
+  margin: 10px 0 14px;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.availability-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--squircle);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.availability-note i { color: var(--purple-light); font-size: 15px; }
+
+.carousel-card-link-label {
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  gap: 5px;
+  color: var(--card-accent);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.carousel-card-link-label i { font-size: 15px; }
 
 :focus-visible {
   outline: 2px solid var(--purple-light);
@@ -2799,6 +2869,7 @@ footer {
 .carousel-card--lips { --card-accent: #e8a9c8; }
 .carousel-card--code { --card-accent: #ae9aff; }
 .carousel-card--ember { --card-accent: #f3a36e; }
+.carousel-card--toheeb { --card-accent: #ae9aff; }
 
 .carousel-card-art {
   position: relative;
@@ -3111,7 +3182,8 @@ footer {
   .profile-meta h2 { font-size: 12px; }
   .profile-meta p { font-size: 9px; }
   .home-showcase .hero-title { font-size: 43px; }
-  .carousel-card-copy { grid-template-columns: minmax(0, 1fr) 20px; column-gap: 8px; }
+  .carousel-card-copy { grid-template-columns: minmax(0, 1fr) auto; column-gap: 8px; }
+  .carousel-card-link-label { font-size: 10px; }
   .carousel-card-kicker { font-size: 9px; }
 }
 
