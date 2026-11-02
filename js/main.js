@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateThemeControl(nextTheme);
     try {
       localStorage.setItem("la-code-theme", nextTheme);
-    } catch {}
+    } catch { /* Keep the current theme when storage is unavailable. */ }
   });
   const carousel = document.querySelector(".home-3d-carousel");
   const carouselStage = carousel?.querySelector("[data-carousel-stage]");
@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const carouselTrack = carousel?.querySelector("[data-carousel-track]");
   const carouselProgress = carousel?.querySelector("[data-carousel-progress]");
   const carouselCards = carouselTrack ? [...carouselTrack.querySelectorAll(".carousel-card")] : [];
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const reduceMotion = motionPreference.matches;
+  motionPreference.addEventListener('change', () => window.location.reload());
 
   if (carousel && carouselStage && carouselWindow && carouselTrack && carouselCards.length && !reduceMotion) {
     const stageOffset = carouselStage.getBoundingClientRect().top - carousel.getBoundingClientRect().top;
@@ -78,12 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       document.body.classList.remove("loading");
-    }, 900);
+    }, reduceMotion ? 0 : 900);
   });
 
   const ambient = document.querySelector(".ambient-light");
 
-  if (ambient) {
+  if (ambient && !reduceMotion) {
     let lightX = window.innerWidth / 2;
     let lightY = window.innerHeight / 2;
 
@@ -114,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (menuButton && mobileMenu) {
     const setMenuOpen = (open) => {
+      mobileMenu.inert = !open;
       mobileMenu.classList.toggle("active", open);
       document.body.classList.toggle("menu-open", open);
       menuButton.setAttribute("aria-expanded", String(open));
@@ -122,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (icon) icon.className = open ? "ri-close-line" : "ri-menu-4-line";
     };
 
+    setMenuOpen(false);
     menuButton.addEventListener("click", () => {
       setMenuOpen(!mobileMenu.classList.contains("active"));
     });
@@ -144,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (event) => {
       const href = link.getAttribute("href");
 
-      if (!href || href.startsWith("#") || href.startsWith("mailto:")) {
+      if (reduceMotion || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || link.target === "_blank" || !href || href.startsWith("#") || href.startsWith("mailto:")) {
         return;
       }
 
@@ -185,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealObserver.observe(element);
   });
 
-  const tiltElements = document.querySelectorAll("[data-tilt]");
+  const tiltElements = reduceMotion ? [] : document.querySelectorAll("[data-tilt]");
 
   tiltElements.forEach((element) => {
     let rotateX = 0;
@@ -233,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.querySelectorAll("[data-magnetic]").forEach((button) => {
+  (reduceMotion ? [] : document.querySelectorAll("[data-magnetic]")).forEach((button) => {
     button.addEventListener("mousemove", (event) => {
       const rect = button.getBoundingClientRect();
 
@@ -254,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const object = document.querySelector(".object");
 
-  if (object) {
+  if (object && !reduceMotion) {
     let autoRotation = 0;
     let hovering = false;
 
@@ -282,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rotateObject();
   }
 
-  document.querySelectorAll(".project-card").forEach((card) => {
+  (reduceMotion ? [] : document.querySelectorAll(".project-card")).forEach((card) => {
     card.addEventListener("mousemove", (event) => {
       const rect = card.getBoundingClientRect();
 
