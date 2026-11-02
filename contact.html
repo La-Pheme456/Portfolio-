@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body data-page="contact">
     <div class="ambient-light"></div>
@@ -129,118 +130,61 @@
       </div>
     </aside>
 
-    <main class="page">
+    <main class="page contact-page">
       <div class="container">
-        <section class="page-intro">
-          <div class="page-intro-inner">
-            <div class="page-label reveal">
-              <span class="kicker-line"></span>
-
-              04 / Contact
-            </div>
-
-            <h1 class="reveal delay-1">
-              Let's talk
-              <span> about your idea. </span>
-            </h1>
-
-            <p class="reveal delay-2">
-              Have a website to build, improve or rethink? Tell me what you're
-              working on.
-            </p>
-          </div>
+        <section class="contact-hero" aria-labelledby="contact-heading">
+          <div class="page-label"><span class="kicker-line"></span>04 / CONTACT</div>
+          <p class="contact-availability"><span aria-hidden="true"></span> Open to projects &amp; frontend opportunities</p>
+          <h1 id="contact-heading">Good work starts<br />with a <em>conversation.</em></h1>
+          <p class="contact-lead">Have a website in mind, a frontend role to fill, or an idea worth exploring? Tell me what you need. Let's work out the next step together.</p>
         </section>
 
-        <section class="contact">
-          <div class="contact-inner reveal">
-            <div class="section-number">GET IN TOUCH</div>
+        <div class="contact-grid">
+          <section class="contact-direct" aria-labelledby="direct-heading">
+            <span class="contact-eyebrow">LET'S CONNECT</span>
+            <h2 id="direct-heading">A direct line to me.</h2>
+            <p>Email is the best place to start. Share a little context and we can discuss how I can help.</p>
+            <a class="contact-email" href="mailto:femilawal433@gmail.com">femilawal433@gmail.com <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+            <button class="contact-copy" type="button" id="copy-email"><i class="ri-file-copy-line" aria-hidden="true"></i> Copy email address</button>
+            <p class="contact-feedback" id="copy-status" role="status"></p>
 
-            <h2 class="contact-title">
-              Let's build
-              <span> something good. </span>
-            </h2>
-
-            <p class="contact-description">
-              The easiest way to reach me is through email. You can also find me
-              through my social profiles.
-            </p>
-
-            <p class="availability-note"><i class="ri-checkbox-circle-line" aria-hidden="true"></i> Open to frontend opportunities</p>
-
-            <div class="contact-actions">
-              <a href="assets/Lawal_Oluwafemi_CV_With_JavaScript.pdf" class="button button-outline" download="Lawal_Oluwafemi_CV.pdf">Download CV <i class="ri-download-2-line" aria-hidden="true"></i></a>
-              <a
-                href="mailto:femilawal433@gmail.com"
-                class="button button-primary"
-                data-magnetic>
-                <i class="ri-mail-line"></i>
-                femilawal433@gmail.com
-              </a>
-
-              <a
-                href="https://github.com/La-Pheme456"
-                class="button button-outline"
-                target="_blank"
-                rel="noopener">
-                <i class="ri-github-line"></i>
-                GitHub
-              </a>
-
-              <a
-                href="https://www.tiktok.com/@lapheme0.1"
-                class="button button-outline"
-                target="_blank"
-                rel="noopener">
-                <i class="ri-tiktok-line"></i>
-                TikTok
-              </a>
-
-              <a
-                href="https://www.youtube.com/@La-phem"
-                class="button button-outline"
-                target="_blank"
-                rel="noopener">
-                <i class="ri-youtube-line"></i>
-                YouTube
-              </a>
+            <div class="contact-opportunities">
+              <div><i class="ri-code-s-slash-line" aria-hidden="true"></i><div><h3>Build something</h3><p>Business websites, landing pages and responsive frontend interfaces.</p></div></div>
+              <div><i class="ri-briefcase-line" aria-hidden="true"></i><div><h3>Work together</h3><p>Frontend roles, internships and creative collaborations.</p></div></div>
             </div>
+            <div class="contact-resources">
+              <a class="button button-outline" href="assets/Lawal_Oluwafemi_CV_With_JavaScript.pdf" download="Lawal_Oluwafemi_CV.pdf"><i class="ri-download-2-line" aria-hidden="true"></i> Download CV</a>
+              <a class="contact-text-link" href="work.html">Explore my work <span aria-hidden="true">↗</span></a>
+            </div>
+            <nav class="contact-social-links" aria-label="Find me online">
+              <a href="https://github.com/La-Pheme456" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://www.tiktok.com/@lapheme0.1" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+              <a href="https://www.youtube.com/@La-phem" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+            </nav>
+          </section>
 
-            <form class="enquiry-form reveal delay-1" id="enquiry-form">
-              <input
-                class="enquiry-field"
-                type="text"
-                id="enquiry-name" aria-label="Your name"
-                name="name"
-                placeholder="Your name"
-                required />
-              <input
-                class="enquiry-field"
-                type="email"
-                id="enquiry-email" aria-label="Your email"
-                name="email"
-                placeholder="Your email"
-                required />
-              <textarea
-                class="enquiry-field enquiry-message"
-                id="enquiry-message" aria-label="Project details"
-                name="message"
-                placeholder="Tell me a little about your project"
-                required></textarea>
-              <div class="contact-actions">
-                <button
-                  type="submit"
-                  class="button button-primary"
-                  data-magnetic>
-                  Send Enquiry
-                  <i class="ri-send-plane-line"></i>
-                </button>
+          <section class="contact-form-card" aria-labelledby="form-heading">
+            <span class="contact-eyebrow">YOUR NEXT STEP</span>
+            <h2 id="form-heading">Tell me what you have in mind.</h2>
+            <p>A short introduction is enough to get started.</p>
+            <form id="contact-enquiry" aria-describedby="contact-form-note">
+              <div class="contact-field-pair">
+                <div class="contact-field"><label for="contact-name">Your name <span>(required)</span></label><input id="contact-name" name="name" autocomplete="name" placeholder="Your full name" maxlength="100" required /></div>
+                <div class="contact-field"><label for="contact-email">Email address <span>(required)</span></label><input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="200" required /></div>
               </div>
-              <div class="enquiry-note">
-                Sending the form will open your email app with the enquiry ready
-                to send.
-              </div>
+              <div class="contact-field"><label for="contact-topic">What brings you here?</label><select id="contact-topic" name="topic"><option>Website project</option><option>Website improvements</option><option>Job or internship opportunity</option><option>Creative collaboration</option><option>Something else</option></select></div>
+              <div class="contact-field"><label for="contact-message">Your message <span>(required)</span></label><textarea id="contact-message" name="message" rows="5" maxlength="1800" placeholder="What are you working on? Tell me about your goals, the help you need, and any timeline you have in mind." required></textarea></div>
+              <button class="button button-primary contact-submit" type="submit">Continue to email <i class="ri-arrow-right-up-line" aria-hidden="true"></i></button>
+              <p id="contact-form-note" class="contact-form-note">This opens a draft in your email app. Review it and press Send there.</p>
+              <p id="contact-form-status" class="contact-feedback" role="status"></p>
+              <noscript><p>Please email <a href="mailto:femilawal433@gmail.com">femilawal433@gmail.com</a> directly to get in touch.</p></noscript>
             </form>
-          </div>
+          </section>
+        </div>
+
+        <section class="contact-next" aria-labelledby="next-heading">
+          <div><span class="contact-eyebrow">FROM HELLO TO A PLAN</span><h2 id="next-heading">What happens next?</h2></div>
+          <ol><li><span>01</span><div><h3>Share the idea</h3><p>Tell me what you need and what a good result looks like.</p></div></li><li><span>02</span><div><h3>Talk through the details</h3><p>We discuss the scope, your priorities and the questions that matter.</p></div></li><li><span>03</span><div><h3>Agree on a next step</h3><p>For projects, we confirm the work, timing and cost before starting.</p></div></li></ol>
         </section>
       </div>
     </main>
@@ -286,5 +230,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
