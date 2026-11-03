@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (event) => {
       const href = link.getAttribute("href");
 
-      if (!href || href.startsWith("#") || href.startsWith("mailto:")) {
+      if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || link.hasAttribute("download") || link.target === "_blank" || !href || href.startsWith("#") || href.startsWith("mailto:")) {
         return;
       }
 
