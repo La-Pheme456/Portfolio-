@@ -3295,3 +3295,7 @@ footer {
 @media (max-width: 1300px) and (min-width: 1081px) { .contact-grid { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; gap: 16px; } .contact-page .contact-hero { padding-top: 42px; padding-bottom: 14px; } .contact-next ol { grid-template-columns: 1fr; } .contact-lead { font-size: 15px; } }
 @media (max-width: 480px) { .contact-field-pair { grid-template-columns: 1fr; gap: 20px; } .contact-field input, .contact-field select, .contact-field textarea { font-size: 16px; } .contact-form-card { padding: 22px 18px; } }
+
+
+/* Keep decorative effects inside the viewport without creating a scroll container. */
+html { overflow-x: clip; }
