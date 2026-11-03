@@ -3243,3 +3243,11 @@ footer {
 
 .carousel-card-art--image .carousel-art-label { top: 14px; left: 14px; }
 .carousel-card-art--image .carousel-art-index { right: 14px; bottom: 14px; }
+
+/* Honor reduced motion across the whole site, including pointer effects. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .ambient-light, .page-transition { display: none; }
+}
+:focus-visible { outline: 3px solid var(--purple-light); outline-offset: 5px; }

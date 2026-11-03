@@ -7,6 +7,7 @@
 
     <script>try { if (localStorage.getItem("la-code-theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
     <title>About — LA-Code</title>
+    <meta name="description" content="Meet Lawal Oluwafemi (LA-Code), a frontend developer exploring responsive websites, creative development and visual storytelling." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -80,13 +81,13 @@
         <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
           <i class="ri-sun-line" aria-hidden="true"></i>
         </button>
-        <button class="menu-button">
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
           <i class="ri-menu-4-line"></i>
         </button>
       </nav>
     </header>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-navigation">
       <div class="mobile-links">
         <a href="index.html" class="mobile-link" data-transition> Home </a>
 
@@ -139,7 +140,7 @@
       </div>
     </aside>
 
-    <main class="page">
+    <main class="page" id="main-content">
       <div class="container">
         <section class="page-intro">
           <div class="page-intro-inner">
